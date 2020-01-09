@@ -1,0 +1,25 @@
+package com.app.sort;
+
+import java.util.stream.Stream;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String[] s= {"nareshit","java","inetsolv"};
+		Stream<String> s1=Stream.of(s);
+			//System.out.println(s1.count());	
+			//s1.forEach((x)->{System.out.println(x);});
+		/*
+		 * Stream<String> s2=s1.sorted(); s2.forEach((x)->{ System.out.println(x); });
+		 */
+		
+		Stream<Integer> s2=Stream.of(new Integer[] {10,15,20,25,30,35});
+		System.out.println(s2.count());
+		Stream<Integer> s3=s2.sorted();
+		Object[] o=s2.toArray();
+		for(Object o1:o) {
+			System.out.println(o1+" ");
+		}
+	}
+}

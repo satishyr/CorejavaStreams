@@ -1,0 +1,31 @@
+package com.app.collectors;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		/*
+		 * List<Integer> li=new ArrayList<Integer>(); li.add(15); li.add(20);
+		 * li.add(25); li.add(23); li.add(89); li.add(87); li.add(48);
+		 * System.out.println(li+" ");
+		 */	
+		Stream<Integer> s=Stream.of(new Integer[] {15,20,56,89,25,23,26,59}).map((x)->x*x);
+		
+		Object[] o1=s.toArray();
+		for(Object o2:o1) {
+			System.out.println(o2);
+		}
+		/*
+		 * List<Integer> l=li.stream().map((x)->x*x).collect(Collectors.toList());
+		 * for(Object o1:l) System.out.println(o1);
+		 */
+	//	li.stream().map((x)->x*x).collect(Collectors.toList()).forEach(System.out::println);
+	}
+	
+
+}

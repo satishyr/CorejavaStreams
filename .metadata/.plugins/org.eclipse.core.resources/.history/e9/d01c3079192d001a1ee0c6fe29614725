@@ -1,0 +1,22 @@
+package com.app.flatmap;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class Test {
+public static void main(String[] args) {
+	List<String> l=new ArrayList<String>();
+	l.add("corejava advancejav Spring");
+	l.add("nit kit nren");
+	l.add("ram sg ka");
+	System.out.println("l:"+l);
+	Stream<String> s=l.stream();
+	s.flatMap((x)->{
+		String[] value=x.split(" ");
+		return Arrays.asList(value).stream();
+	});
+}
+	
+}

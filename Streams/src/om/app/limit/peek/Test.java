@@ -1,0 +1,56 @@
+package om.app.limit.peek;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		List<Integer> al=new ArrayList<Integer>();
+		al.add(15);
+		al.add(20);
+		al.add(25);
+		al.add(30);
+		al.add(35);
+		al.add(40);
+		al.add(45);
+		al.add(15);
+		System.out.println("al:"+al);
+		//Stream<Integer> s=al.stream();
+		
+		/*1
+		 * Object[] o=s.toArray(); for(Object o1:o) { System.out.println(o1); }
+		 */ 
+	
+		/*2
+		 * Stream<Integer> s1=s.distinct();
+		 * 
+		 * Object[] o=s1.toArray(); for(Object o1:o) { System.out.println(o1); }
+		 */	 
+	
+	//Stream<Integer> s2=s.limit(3);
+	
+		/*3
+		 * Object[] o=s2.toArray(); for(Object o1:o) { System.out.println(o1); }
+		 * 
+		 */
+		
+	//4
+		/*
+		 * Stream<Integer> s3=s2.peek((x)->{ System.out.println(x+"-----"+(x*x)); });
+		 * s3.count();
+		 */ 
+	
+		
+		  Stream<Integer> si=al.stream().distinct().limit(3).peek((x)->{
+		  System.out.println(x+"----"+(x*x));
+		  
+		  });
+		 Object[] o=si.toArray();
+		 for(Object o1:o) {
+			 System.out.println("o1:"+o1);
+		 }
+	}
+}

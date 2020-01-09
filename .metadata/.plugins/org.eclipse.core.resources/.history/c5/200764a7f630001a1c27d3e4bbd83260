@@ -1,0 +1,30 @@
+package com.app.allmatch;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		List<String> al=new ArrayList<String>();
+		al.add("java advancejava oracle");
+		al.add("aws data oracle");
+		al.add("html java script ");
+		Stream<String> s=al.stream();
+		/*
+		 * boolean b=s.anyMatch((x)->{return x.startsWith("java");} );
+		 * System.out.println("b:"+b);
+		 */
+		
+		/*
+		 * boolean b=s.allMatch((x)->{return x.startsWith("java");});
+		 * System.out.println("b:"+b);
+		 */
+		
+		boolean b=s.noneMatch((x)->{return x.startsWith("java");});
+		System.out.println("b:"+b);
+	}
+
+}

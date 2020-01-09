@@ -1,0 +1,19 @@
+package com.app.collectors;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Test {
+
+	public static void main(String[] args) {
+		List<Integer> li=new ArrayList<Integer>();
+		li.add(10);
+		li.add(45);
+		li.add(40);
+		li.add(15);
+		li.add(25);
+		li.add(25);
+		List<Integer> l=li.stream().collect(Collectors.toList());
+	}
+}

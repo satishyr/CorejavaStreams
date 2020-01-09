@@ -14,7 +14,7 @@ public static void main(String[] args) {
 	l1.add("nayanathara");
 System.out.println(l1);
 List<String> l2=l1.stream().filter(s->s.length()%2==0).collect(Collectors.toList());
-System.out.println(l2);
+System.out.println(l);
 }
 
 }
